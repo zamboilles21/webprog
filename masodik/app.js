@@ -1,0 +1,1 @@
+let box1 = document.getElementById('box1');

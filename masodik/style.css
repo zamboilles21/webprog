@@ -1,3 +1,17 @@
 body{
     background-color: ghostwhite;
 }
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: papayawhip;
+    margin: 5px;
+    padding: 1px;
+}
+.box3{
+    width: 200px;
+    height: 200px;
+    background-color: maroon;
+    margin: 5px;
+    padding: 1px;
+}
