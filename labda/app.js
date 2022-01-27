@@ -8,3 +8,7 @@ let screenY=window.innerHeight;
 
 ball.style.top=ballY+'px';
 ball.style.left=ballX+'px';
+
+function moveBall(){
+    
+}
