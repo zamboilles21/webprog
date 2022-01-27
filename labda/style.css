@@ -1,0 +1,13 @@
+body{
+    background-color: gold;
+
+}
+#ball{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    border: navy 2px solid;
+    border-radius: 50%;
+    box-shadow: 0 0 10px gainsboro;
+}
