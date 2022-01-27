@@ -1,7 +1,8 @@
 body{
-    background-color: ghostwhite;
+    background-color:gold;
 }
 #box1{
+    position: relative;
     width: 200px;
     height: 200px;
     background-color: papayawhip;
@@ -9,9 +10,14 @@ body{
     padding: 1px;
 }
 .box3{
+    position: relative;
     width: 200px;
     height: 200px;
     background-color: maroon;
     margin: 5px;
     padding: 1px;
+}
+.bekezdes{
+    color: midnightblue;
+    font-style: italic;
 }
