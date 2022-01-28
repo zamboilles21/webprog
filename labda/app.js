@@ -56,7 +56,7 @@ function setBallPoz(x, y){
     ball.style.left = x + 'px'; 
 }
 function setBatPoz(x, y){
-    bat.style.top = screenY-20 + 'px';
+    bat.style.top = screenY-45 + 'px';
     bat.style.left = x + 'px'; 
 }
 
@@ -82,5 +82,23 @@ function getWindowSize(){
 window.addEventListener('resize',getWindowSize);
 
 window.addEventListener('keydown',function(e){
-    console.log(e.keyCode);
+    if(e.keyCode==39)
+    {
+        if(batX+batSize<screenX)
+        {
+            batX+=15;
+            setBatPoz(batX,screenY-45);
+        }
+    }
+    if(e.keyCode==37)
+    {
+        if(batX+batSize>0)
+        {
+            batX-=15;
+            setBatPoz(batX,screenY-45);
+        }
+    }
+});
+window.addEventListener('mousemove',function(e){
+    batX=
 })
