@@ -13,6 +13,8 @@ let dy = 1;
 getWindowSize();
 
 setBallStartPoz();
+setBatStartPoz();
+setBatPoz();
 
 setBallSize(ballSize);
 setBatSize(batSize);
@@ -65,15 +67,20 @@ function setBallStartPoz(){
     setBallPoz(ballX, ballY); 
 }
 function setBatStartPoz(){
-    batX = Math.round(Math.random()*screenX);
-    batY = 0;
-    setBallPoz(ballX, ballY); 
+    batX = 0;
+    batY = screenY-40;
+    setBallPoz(batX, batY); 
 }
 
 // lekérdezzük az aktuális képernyő méretet
 function getWindowSize(){
     screenX = window.innerWidth-ballSize;
     screenY = window.innerHeight-ballSize; 
+    setBatStartPoz();
 }
 
 window.addEventListener('resize',getWindowSize);
+
+window.addEventListener('keydown',function(e){
+    console.log(e.keyCode);
+})
