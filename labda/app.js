@@ -60,3 +60,4 @@ function getWindowSize(){
     screenY = window.innerHeight-ballSize; 
 }
 
+window.addEventListener('resize',getWindowSize);

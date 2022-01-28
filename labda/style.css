@@ -11,3 +11,12 @@ body{
     border-radius: 50%;
     box-shadow: 0 0 10px gainsboro;
 }
+#bat{
+    position: relative;
+    background-color: olivedrab;
+    border: 2px solid steelblue;
+    width: 120px;
+    height: 15px;
+    box-shadow: hotpink 0 0 20px;
+    border-radius: 6px;
+}
