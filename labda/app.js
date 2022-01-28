@@ -7,6 +7,8 @@ let screenX;
 let screenY;
 let ballX;
 let ballY;
+let batX;
+let batY;
 let dx = 1;
 let dy = 1;
 
@@ -38,6 +40,13 @@ function movingBall(){
     {
         dx *= -1;
     }
+    if (ballY>=batY) {
+        let ballMid=(ballX+ballSize)/2;
+        if ((ballMid>=batX)&&(ballMid<=(batX+ballSize))) {
+            dy*=-1
+        }
+        clearInterval(game);
+    }
     if(ballY>=screenY-8){
         clearInterval(game);
         window.alert('GAME OVER')
@@ -59,9 +68,8 @@ function setBallPoz(x, y){
     ball.style.top = y + 'px';
     ball.style.left = x + 'px'; 
 }
-function setBatPoz(x, y){
-    bat.style.top = screenY-45 + 'px';
-    bat.style.left = x + 'px'; 
+function setBatPoz(X){
+    bat.style.left = batY + 'px'; 
 }
 
 // beállítjuk a labda kezdőpozícióját
