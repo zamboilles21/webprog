@@ -38,6 +38,10 @@ function movingBall(){
     {
         dx *= -1;
     }
+    if(ballY>=screenY-8){
+        clearInterval(game);
+        window.alert('GAME OVER')
+    }
 }
 
 // beállítjuk a labda méretét
@@ -100,5 +104,6 @@ window.addEventListener('keydown',function(e){
     }
 });
 window.addEventListener('mousemove',function(e){
-    batX=
+    batX=e.x;
+    setBatPoz(batX)
 })
