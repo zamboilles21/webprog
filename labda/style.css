@@ -4,8 +4,7 @@ body{
 }
 #ball{
     position: relative;
-    width: 200px;
-    height: 200px;
+    
     background-color: lightblue;
     border: navy 2px solid;
     border-radius: 50%;
@@ -15,8 +14,7 @@ body{
     position: relative;
     background-color: olivedrab;
     border: 2px solid steelblue;
-    width: 120px;
-    height: 15px;
+    
     box-shadow: hotpink 0 0 20px;
     border-radius: 6px;
 }

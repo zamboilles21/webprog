@@ -1,5 +1,7 @@
 let ball = document.querySelector('#ball');
+let bat = document.querySelector('#bat');
 let ballSize = 54;
+let batSize = 122;
 let speed = 3;
 let screenX;
 let screenY;
@@ -13,6 +15,7 @@ getWindowSize();
 setBallStartPoz();
 
 setBallSize(ballSize);
+setBatSize(batSize);
 
 setInterval(movingBall, 10);
 
@@ -40,17 +43,30 @@ function setBallSize(size){
     ball.style.width = size+'px';
     ball.style.height = size+'px';
 }
+function setBatSize(size){
+    bat.style.width = size+'px';
+    bat.style.height = 15 +'px';
+}
 
 // beállítjuk a labda pozícióját
 function setBallPoz(x, y){
     ball.style.top = y + 'px';
     ball.style.left = x + 'px'; 
 }
+function setBatPoz(x, y){
+    bat.style.top = screenY-20 + 'px';
+    bat.style.left = x + 'px'; 
+}
 
 // beállítjuk a labda kezdőpozícióját
 function setBallStartPoz(){
     ballX = Math.round(Math.random()*screenX);
     ballY = 0;
+    setBallPoz(ballX, ballY); 
+}
+function setBatStartPoz(){
+    batX = Math.round(Math.random()*screenX);
+    batY = 0;
     setBallPoz(ballX, ballY); 
 }
 
