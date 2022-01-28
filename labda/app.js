@@ -1,37 +1,62 @@
 let ball = document.querySelector('#ball');
-let ballSize=54;
-let speed=3;
-let ballX=Math.round(Math.random()*screenX);
-let ballY=0;
-let screenX=window.innerWidth-ballSize;
-let screenY=window.innerHeight-ballSize;
-let dx=1;
-let dy=1;
-ball.style.top=ballY+'px';
-ball.style.left=ballX+'px';
+let ballSize = 54;
+let speed = 3;
+let screenX;
+let screenY;
+let ballX;
+let ballY;
+let dx = 1;
+let dy = 1;
 
-ball.style.width=ballY+'px';
-ball.style.height=ballX+'px';
+getWindowSize();
 
-setInterval(moveBall,10)
+setBallStartPoz();
 
-function moveBall(){
-    ballX+=dx*speed;
-    ballY+=dy*speed;
-    ball.style.top=ballY+'px';
-    ball.style.left=ballX+'px';
-    if((ballY>=screenY-6)||(ballY<=-8))
+setBallSize(ballSize);
+
+setInterval(movingBall, 10);
+
+// mozgatjuk a labdát
+function movingBall(){
+    ballX += dx*speed;
+    ballY += dy*speed; 
+    
+    setBallPoz(ballX, ballY); 
+
+    // ütközés a képernyő szélével
+    if ((ballY >= screenY-8) || (ballY <= -8))
     {
         dy *= -1;
     }
-    if((ballX>=screenX-6)||(ballX<=-8))
+    
+    if ((ballX >= screenX-8) || (ballX <= -8))
     {
         dx *= -1;
-
     }
 }
 
-function setBallsize(size){
-    ball.style.width=size+'px';
-    ball.style.height=size+'px';
+// beállítjuk a labda méretét
+function setBallSize(size){
+    ball.style.width = size+'px';
+    ball.style.height = size+'px';
 }
+
+// beállítjuk a labda pozícióját
+function setBallPoz(x, y){
+    ball.style.top = y + 'px';
+    ball.style.left = x + 'px'; 
+}
+
+// beállítjuk a labda kezdőpozícióját
+function setBallStartPoz(){
+    ballX = Math.round(Math.random()*screenX);
+    ballY = 0;
+    setBallPoz(ballX, ballY); 
+}
+
+// lekérdezzük az aktuális képernyő méretet
+function getWindowSize(){
+    screenX = window.innerWidth-ballSize;
+    screenY = window.innerHeight-ballSize; 
+}
+
