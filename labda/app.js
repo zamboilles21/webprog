@@ -32,6 +32,9 @@ let giftfall=setInterval(fallingGift, 100);
 function fallingGift() {
     gifty+=1;
     setGiftPoz(giftx,gifty);
+    if(gifty>=screenY){
+        clearInterval(giftfall);
+    }
 }
 
 
