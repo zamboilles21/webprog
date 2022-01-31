@@ -27,6 +27,13 @@ updateResults();
 setGiftStartPoz();
 
 let game = setInterval(movingBall, 10);
+let giftfall=setInterval(fallingGift, 100);
+
+function fallingGift() {
+    gifty+=1;
+    setGiftPoz(giftx,gifty);
+}
+
 
 // mozgatjuk a labdát
 function movingBall(){
