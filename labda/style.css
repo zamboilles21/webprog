@@ -26,3 +26,19 @@ body{
     
 
 }
+#info{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 155px;
+    height: 95px;
+    background-color: lightcoral;
+    color: yellow;
+    font-weight: bold;
+    text-shadow: unset;
+    padding: 15px;
+    line-height: 200%;
+    letter-spacing: 2px;
+    border: 2px solid greenyellow;
+    box-shadow: 0 0 10px gray;
+}
