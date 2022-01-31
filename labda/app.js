@@ -2,15 +2,18 @@ let ball = document.querySelector('#ball');
 let bat = document.querySelector('#bat');
 let pointsLbl = document.querySelector('#pointsLbl');
 let speedLbl=document.querySelector('#speedLbl');
+let gift = document.querySelector('#gift');
 let ballSize = 54;
 let batSize = 120;
-let speed = 2;
+let speed = 3;
 let screenX;
 let screenY;
 let ballX;
 let ballY;
 let batX;
 let batY;
+let giftx;
+let gifty;
 let dx = 1;
 let dy = 1;
 let points=0;
@@ -20,6 +23,8 @@ setBallStartPoz();
 setBatStartPoz()
 setBallSize(ballSize);
 setBatSize(batSize);
+updateResults();
+setGiftStartPoz();
 
 let game = setInterval(movingBall, 10);
 
@@ -34,8 +39,7 @@ function movingBall(){
     if (ballY <= -8)
     {
         dy *= -1;
-        points++;
-        updateResults();
+       
     }
     
     if ((ballX >= screenX-8) || (ballX <= -8))
@@ -50,6 +54,11 @@ function movingBall(){
         if ((ballMid >= batX) && (ballMid <= (batX+batSize)))
         {
             dy *= -1;
+            points++;
+            if(points==10){
+                speed++;
+            }
+            updateResults();
         }
     }
 
@@ -84,12 +93,21 @@ function setBatPoz(x){
     bat.style.top = batY + 'px';
     bat.style.left = x + 'px'; 
 }
+function setGiftPoz(x){
+    gift.style.top = y + 'px';
+    gift.style.left = x + 'px'; 
+}
 
 // beállítjuk a labda kezdőpozícióját
 function setBallStartPoz(){
     ballX = Math.round(Math.random()*screenX);
     ballY = 0;
     setBallPoz(ballX, ballY); 
+}
+function setGiftStartPoz(){
+    giftx = Math.round(Math.random()*screenX);
+    gifty = 0;
+    setGiftPoz(giftx, gifty); 
 }
 
 // beállítjuk az ütő kezdőpozícióját
