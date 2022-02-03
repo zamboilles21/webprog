@@ -2,6 +2,7 @@
     --body-bg:silver;
     --container-bg:grey;
     --shadow:red;
+    --editor-bg:maroon;
 }
 body{
     background-color: var(--body-bg);
@@ -15,8 +16,53 @@ display: flex;
 flex-direction: row;
 }
 #editor{
-
+    width: 330px;
+    background-color: var(--editor-bg);
+    text-align: center;
 }
 #timetable{
-
+    width: 100%;
+    text-align: center;
+}
+hr{
+    width: 81%;
+    color: var(--shadow);
+}
+h2{
+    padding: 6px;
+    margin: 20px;
+}
+.table{
+    width: 100%;
+    border:2px solid tomato;
+    border-collapse: collapse;
+}
+.table th{
+    background-color: var(--editor-bg);
+    border: 1px solid var(--shadow);
+    padding: 5px;
+}
+.table tfoot td{
+    background-color: var(--editor-bg);
+    font-size: 80%;
+    padding: 5px;
+    letter-spacing: 3px;
+}
+.table tbody td{
+    border: 1px solid var(--shadow);
+    width: 25%;
+    cursor: pointer;
+}
+.table tbody td:hover{
+    box-shadow: inset 0 0 7px sienna;
+}
+label{
+    display: block;
+    text-align: left;
+    margin: 5px 15px;
+}
+section, button{
+    display: block;
+    margin: 10px;
+    width: 90%;
 }

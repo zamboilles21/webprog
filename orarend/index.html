@@ -10,10 +10,155 @@
 <body>
     <div id="container">
         <div id="editor">
-            <h1>Szerkesztő</h1>
+            <h2>Szerkesztő</h2>
+
+            <hr>
+            <form>
+                <label for="day">Nap:</label>
+                <select id="day">
+                    <option value="">Válsszon....</option>
+                    <option value="0">Hétfő</option>
+                    <option value="1">Kedd</option>
+                    <option value="2">Szerda</option>
+                    <option value="3">Csütörtök</option>
+                    <option value="4">Péntek</option>
+                    
+                    
+                </select>
+                <label for="hour">Óra:</label>
+                <select id="hour">
+                    <option value="">Válsszon....</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+                <label for="subject">Óra:</label>
+                <select id="subject">
+                    <option value="">Válsszon....</option>
+                    <option value="0">Magyar</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+                <button value="Hozzáadás"></button>
+            </form>
         </div>
         <div id="timetable">
-                <h1>Órarend</h1>
+                <h2>Órarend</h2>
+                <hr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Óra</th>
+                            <th>Hétfő</th>
+                            <th>Kedd</th>
+                            <th>Szerda</th>
+                            <th>Csütörtök</th>
+                            <th>Péntek</th>
+                            
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1.</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <th>2.</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <th>3.</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <th>4.</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <th>5.</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <th>6.</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                           
+                            
+                        </tr>
+                        <tr>
+                            <th>7.</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                        </tr>
+                        <tr>
+                            <th>8.</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">Összesen: 0 óra</td>
+                        </tr>
+                    </tfoot>
+                </table>
         </div>
     </div>
     <script src="app.js"></script>
