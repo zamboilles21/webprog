@@ -9,8 +9,8 @@ body{
 }
 #container{
 background-color: var(--container-bg);
-margin: 20px;
-padding: 20px;
+margin: 15px;
+padding: 15px;
 box-shadow: 0 0 20px var(--shadow);
 display: flex;
 flex-direction: row;
@@ -25,12 +25,12 @@ flex-direction: row;
     text-align: center;
 }
 hr{
-    width: 81%;
+    width: 80%;
     color: var(--shadow);
 }
 h2{
-    padding: 6px;
-    margin: 20px;
+    padding: 5px;
+    margin: 15px;
 }
 .table{
     width: 100%;
@@ -60,9 +60,21 @@ label{
     display: block;
     text-align: left;
     margin: 5px 15px;
+    font-weight: bold;
+    font-style: italic;
 }
 section, button{
     display: block;
     margin: 10px;
     width: 90%;
+}
+button{
+    background-color: snow;
+    border: solid 1px firebrick;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+button:hover{
+    background-color: mediumslateblue;
+    cursor: pointer;
 }
