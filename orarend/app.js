@@ -1,9 +1,14 @@
 let napok=['Hétfő','Kedd','Szerda','Csütötök','Péntek'];
 let orak=[0,2,3,4,5,6,7,8];
 let tantargyak=[
-    {
-        
-    }
+    {nev:'Hálózatok', terem: '103', tanar:'VJ', bgcolor: '#0000ff'},
+ {nev:'Webprogramozás 1', terem: '311', tanar:'NSZ', bgcolor: '#00ff00'},
+ {nev:'Webprogramozás 2', terem: '206', tanar:'SD', bgcolor: '#ff0000'},
+ {nev:'Asztali alk.', terem: '205', tanar:'TP', bgcolor: '#237822'},
+ {nev:'Szoftvertesztelés', terem: '100', tanar:'FZ', bgcolor: '#123456'},
+ {nev:'Szakmai Angol', terem: '213', tanar:'RE', bgcolor: '#654231'},
+ {nev:'Adatbázis kezelés', terem: '206', tanar:'HR', bgcolor: '#325467'}
+
 ];
 
 let daySelect=document.querySelector('#day');
@@ -40,7 +45,7 @@ function addSubjects() {
     napok.forEach(tantargy=>{
         let subject=document.createElement('option');
         subject.value=i;
-        subject.innerHTML=tantargy;
+        subject.innerHTML=tantargy.nev;
         subkectSelect.appendChild(subject);
         i++;
     });
