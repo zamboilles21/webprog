@@ -13,7 +13,7 @@ let tantargyak=[
 
 let daySelect=document.querySelector('#day');
 let hourSelect=document.querySelector('#hour');
-let subjectSelect=document.querySelector('#subjects');
+let subjectSelect=document.querySelector('#subject');
 let addBtn=document.querySelector('#addBtn');
 
 addDays();
@@ -32,21 +32,21 @@ function addDays() {
 }
 function addHours() {
     let i = 0;
-    napok.forEach(ora=>{
+    orak.forEach(ora=>{
         let hour=document.createElement('option');
-        ora.value=i;
-        ora.innerHTML=nap;
-        hourSelect.appendChild(ora);
+        hour.value=i;
+        hour.innerHTML=ora;
+        hourSelect.appendChild(hour);
         i++;
     });
 }
 function addSubjects() {
     let i = 0;
-    napok.forEach(tantargy=>{
+    tantargyak.forEach(tantargy=>{
         let subject=document.createElement('option');
         subject.value=i;
         subject.innerHTML=tantargy.nev;
-        subkectSelect.appendChild(subject);
+        subjectSelect.appendChild(subject);
         i++;
     });
 }
