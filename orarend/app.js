@@ -10,6 +10,9 @@ let tantargyak=[
  {nev:'Adatbázis kezelés', terem: '206', tanar:'HR', bgcolor: '#325467'}
 
 ];
+let orarend=[
+    {dayIndex:2,hourIndex:5,subjectIndex:6}
+];
 
 let daySelect=document.querySelector('#day');
 let hourSelect=document.querySelector('#hour');
@@ -18,6 +21,7 @@ let addBtn=document.querySelector('#addBtn');
 let dayIndex;
 let hourIndex;
 let subjectIndex;
+
 
 addDays();
 addHours();
@@ -28,11 +32,20 @@ addBtn.addEventListener('click',function() {
         window.alert("Üres")
     }else
     {
+
+
         let cella=document.querySelector('#cell_'+dayIndex+hourIndex);
         cella.innerHTML=tantargyak[subjectIndex].nev;
+
+        orarend.push({dayIDX: dayIndex,hourIDX:hourIndex,subjectIDX:subjectIndex});
+
+        localStorage.setItem('timetable',JSON.stringify(orarend));
         daySelect.value="";
         hourSelect.value="";
         subjectSelect.value="";
+        dayIndex=null;
+        hourIndex=null;
+        subjectIndex=null;
     }
     
 })
