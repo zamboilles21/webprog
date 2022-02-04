@@ -1,5 +1,5 @@
 let napok=['Hétfő','Kedd','Szerda','Csütötök','Péntek'];
-let orak=[0,2,3,4,5,6,7,8];
+let orak=[0,1,2,3,4,5,6,7,8];
 let tantargyak=[
     {nev:'Hálózatok', terem: '103', tanar:'VJ', bgcolor: '#0000ff'},
  {nev:'Webprogramozás 1', terem: '311', tanar:'NSZ', bgcolor: '#00ff00'},
@@ -15,11 +15,27 @@ let daySelect=document.querySelector('#day');
 let hourSelect=document.querySelector('#hour');
 let subjectSelect=document.querySelector('#subject');
 let addBtn=document.querySelector('#addBtn');
+let dayIndex;
+let hourIndex;
+let subjectIndex;
 
 addDays();
 addHours();
 addSubjects();
 
+addBtn.addEventListener('click',function() {
+    if (dayIndex==null||hourIndex==null||subjectIndex==null) {
+        window.alert("Üres")
+    }else
+    {
+        let cella=document.querySelector('#cell_'+dayIndex+hourIndex);
+        cella.innerHTML=tantargyak[subjectIndex].nev;
+        daySelect.value="";
+        hourSelect.value="";
+        subjectSelect.value="";
+    }
+    
+})
 function addDays() {
     let i = 0;
     napok.forEach(nap=>{
@@ -50,3 +66,13 @@ function addSubjects() {
         i++;
     });
 }
+daySelect.addEventListener('change',function(){
+    dayIndex=daySelect.value;
+});
+hourSelect.addEventListener('change',function(){
+    hourIndex=hourSelect.value;
+});
+daySelect.addEventListener('change',function(){
+    subjectIndex=subjectSelect.value;
+});
+    
