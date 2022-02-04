@@ -10,9 +10,14 @@ let tantargyak=[
  {nev:'Adatbázis kezelés', terem: '206', tanar:'HR', bgcolor: '#325467'}
 
 ];
-let orarend=[
-    {dayIndex:2,hourIndex:5,subjectIndex:6}
-];
+let orarend=JSON.parse(localStorage.getItem('timetable'));
+
+if (orarend != 0) {
+    orarend.forEach(ora=>{
+        let cella=document.querySelector('cell_'+ora.dayIDX+ora.hourIDX);
+        cella.innerHTML=tantargyak[subjectIDX.nev];
+    });
+}
 
 let daySelect=document.querySelector('#day');
 let hourSelect=document.querySelector('#hour');
