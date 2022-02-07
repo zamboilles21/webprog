@@ -11,13 +11,23 @@ let tantargyak=[
 
 ];
 let orarend=JSON.parse(localStorage.getItem('timetable'));
+let osszoraszam=document.querySelector('osszoraszam');
 
-if (orarend != 0) {
+if (orarend != null) {
     orarend.forEach(ora=>{
-        let cella=document.querySelector('cell_'+ora.dayIDX+ora.hourIDX);
-        cella.innerHTML=tantargyak[subjectIDX.nev];
+        let cella = document.querySelector('#cell_'+ora.dayIdx+ora.hourIdx);
+        cella.innerHTML = tantargyak[ora.subjectIdx].nev 
+            + "<span class='room'>" + tantargyak[ora.subjectIdx].terem + "</span>"  
+            + "<span class='teacher'>" + tantargyak[ora.subjectIdx].tanar + "</span>";
+        cella.classList.add(tantargyak[ora.subjectIdx].style);
     });
 }
+else
+{
+    orarend = [];
+}
+
+osszoraszam.innerHTML=orarend.length;
 
 let daySelect=document.querySelector('#day');
 let hourSelect=document.querySelector('#hour');
@@ -40,10 +50,14 @@ addBtn.addEventListener('click',function() {
 
 
         let cella=document.querySelector('#cell_'+dayIndex+hourIndex);
-        cella.innerHTML=tantargyak[subjectIndex].nev;
+        cella.innerHTML = document.querySelector('#cell_'+ora.dayIdx+ora.hourIdx);
+        cella.innerHTML = tantargyak[subjectIndex].nev 
+            + "<span class='room'>" + tantargyak[ora.subjectIdx].terem + "</span>"  
+            + "<span class='teacher'>" + tantargyak[subjectIndex].tanar + "</span>";
+        cella.classList.add(tantargyak[subjectIndex].style);
 
         orarend.push({dayIDX: dayIndex,hourIDX:hourIndex,subjectIDX:subjectIndex});
-
+        osszoraszam.innerHTML=orarend.length;
         localStorage.setItem('timetable',JSON.stringify(orarend));
         daySelect.value="";
         hourSelect.value="";
@@ -71,7 +85,7 @@ function addHours() {
         hour.value=i;
         hour.innerHTML=ora;
         hourSelect.appendChild(hour);
-        i++;
+        
     });
 }
 function addSubjects() {
