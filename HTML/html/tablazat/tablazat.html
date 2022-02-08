@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <caption>
+            <thead>
+                <tr>
+                    <th id="header11">valami</th>
+                    <th id="header12" colspan="3">valami2</th>
+                </tr>
+                <tr>
+                    <th>valami3</th>
+                    <th>valami4</th>
+                    <th colspan="2">valami5</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="2" id="header4">valami6</th>
+                    <td headers="header4,header12,header22">valami7</td>
+                    <td colspan="2">valami8</td>
+                </tr>
+                <tr>
+                    <td>valami9</td>
+                    <td colspan="2">valami10</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                            Footer
+                    </td>
+                </tr>
+            </tfoot>
+        </caption>
+    </table>
+    <style>
+        table{
+            border: 1px solid #ff0000;
+        }
+        td{
+            border: 1px solid #001000;
+        }
+        th{
+            border: 1px solid #01ff00;
+        }
+    </style>
+</body>
+</html>

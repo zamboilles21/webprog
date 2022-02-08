@@ -1,0 +1,47 @@
+#fejleckep{
+    width: 100px;
+    height: 150px;
+    float: right;
+}
+header{
+    height: 200px;
+    background-color: lightgray;
+}
+#focim{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #416128;
+    font-style: italic;
+}
+.menu{
+    background-color: lightskyblue;
+    align-content: center;
+    padding: 10px;
+    font-size: larger;
+}
+aside{
+    background-image: url('ohatter.jpg');
+    float: right;
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px dashed black;
+    font-weight: bold;
+}
+.bekezdes{
+    margin: 10px;
+}
+table,td,th{
+    text-align: center;
+    height: 40px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#sarga{
+    color: yellow;
+}
+body{
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
