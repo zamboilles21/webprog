@@ -14,10 +14,13 @@ let T;
         let D=(19*A+24)%30;
         let E=(2*B+4*C+6*D+5)%7;
         let H=22+D+E;
-        if (T>31) {
-        
+        if (H<=31) {
+            window.alert("Húsvét Március "+H)
+        }else{
+            window.alert("Húsvét: Április "+(H-31))
         }
-        console.log(A);
+        
+        console.log(H);
     }
     
     
