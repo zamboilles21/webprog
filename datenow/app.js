@@ -17,4 +17,10 @@ valaszto.addEventListener('change',function() {
     kimenet.innerHTML='text: '+valaszto.options[valaszto.selectIndex].text+'value: '+valaszto.value;
     
 })
+var szoveg=document.getElementById('szoveg');
+var kiirva=document.getElementById('kiirva');
+szoveg.addEventListener('keypress',function () {
+    kiirva.innerHTML=szoveg.value;
+    
+})
 
