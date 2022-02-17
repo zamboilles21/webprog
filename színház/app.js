@@ -23,6 +23,8 @@ hely = new Array()
 		if(i%5==0) document.write("<hr size=1 color=#880000>")
 	}
 
+
+    console.table(hely)
     //1.feladat
     let szabadhelyekSzama=0;
     for(i=1;i<=15;i++){
@@ -47,7 +49,7 @@ hely = new Array()
     let jegyarbevetel=0;
 
     for(i=1;i<=15;i++){
-        for (let i =0; i <= 24; i++){
+        for (i=0; i <= 24; i++){
             if (hely[i][j]==1) {
                 if (i<6) {
                     jegyarbevetel+=7500;
@@ -61,5 +63,51 @@ hely = new Array()
             }
            
         }
+    
     }
-    document.writeln(`<br>3.feladat: Jegyárbevétel: ${jegyarbevetel} ft`);
+    document.writeln("3.feladat: Jegyárbevétel: "+jegyarbevetel+" ft");
+
+    let kat1 = [0,0,0];
+        
+    for(i=1;i<=15;i++){
+        for (let i =0; i <= 24; i++){
+            if (hely[i][j]==1) {
+                if (i<6) {
+                    kat1[0]++;
+                }
+                if (i>=6 && i<11) {
+                    kat1[1]++;
+                }
+                if (i>=11) {
+                    kat1[2]++;
+                }
+            }
+        }
+    }
+    let maxindex=1;
+    for ( i = 1; i < 3; i++) {
+        if (kat1[i]>kat1[maxindex]) {
+            maxindex=i;
+        }
+        
+    }
+    console.log(kat1)
+    document.writeln("4.feladat:")
+
+    let van =false;
+    for (i = 0; i <= 15; i++) {
+        if(telesor(i)){
+        van=true;
+        console.log("Sor száma",i)
+        break;        
+    }
+}
+    function telesor(x) {
+        let tele=true;
+        for(i=1;i<=24;i++){
+            if (hely[x][i]==0) {
+                tele=false;
+            }
+        }
+        
+    }
