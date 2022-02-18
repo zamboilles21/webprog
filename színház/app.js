@@ -46,68 +46,79 @@ hely = new Array()
     document.writeln("2.feladat: Eladott jegyek százaléka:  "+(((15*24)-szabadhelyekSzama)/(15*24))*100+"%");
 
     //3.feladat
-    let jegyarbevetel=0;
+    // 3. feladat: Mennyi az eddigi jegyárbevétel?
 
-    for(i=1;i<=15;i++){
-        for (i=0; i <= 24; i++){
-            if (hely[i][j]==1) {
-                if (i<6) {
-                    jegyarbevetel+=7500;
-                }
-                if (i>=6 && i<11) {
-                    jegyarbevetel+=5900;
-                }
-                if (i>=11) {
-                    jegyarbevetel+=4500;
-                }
+let jegyarBevetel = 0;
+
+for (i = 1; i <= 15; i++) {
+    for (j = 1; j <= 24; j++) {
+        if (hely[i][j] == 1) {
+            if (i < 6) {
+                jegyarBevetel += 7500;
             }
-           
-        }
-    
-    }
-    document.writeln("3.feladat: Jegyárbevétel: "+jegyarbevetel+" ft");
-
-    let kat1 = [0,0,0];
-        
-    for(i=1;i<=15;i++){
-        for (let i =0; i <= 24; i++){
-            if (hely[i][j]==1) {
-                if (i<6) {
-                    kat1[0]++;
-                }
-                if (i>=6 && i<11) {
-                    kat1[1]++;
-                }
-                if (i>=11) {
-                    kat1[2]++;
-                }
+            if (i >= 6 && i < 11) {
+                jegyarBevetel += 5900;
+            }
+            if (i >= 11) {
+                jegyarBevetel += 4500;
             }
         }
-    }
-    let maxindex=1;
-    for ( i = 1; i < 3; i++) {
-        if (kat1[i]>kat1[maxindex]) {
-            maxindex=i;
-        }
-        
-    }
-    console.log(kat1)
-    document.writeln("4.feladat:")
-
-    let van =false;
-    for (i = 0; i <= 15; i++) {
-        if(telesor(i)){
-        van=true;
-        console.log("Sor száma",i)
-        break;        
     }
 }
-    function telesor(x) {
-        let tele=true;
-        for(i=1;i<=24;i++){
-            if (hely[x][i]==0) {
-                tele=false;
+
+document.writeln(`<br>3. Feladat: Az eddigi jegyárbevétel: ${jegyarBevetel} Ft`);
+
+// 4. feladat: melyik érkategóriából adták el a legtöbb jegyet?
+
+let kat = [0, 0, 0];
+
+for (i = 1; i <= 15; i++) {
+    for (j = 1; j <= 24; j++) {
+        if (hely[i][j] == 1) {
+            if (i < 6) {
+                kat[0]++;
+            }
+            if (i >= 6 && i < 11) {
+                kat[1]++;
+            }
+            if (i >= 11) {
+                kat[2]++;
             }
         }
-        
     }
+}
+
+let maxindex = 0;
+for (i = 1; i < 3; i++) {
+    if (kat[i] > kat[maxindex]) {
+        maxindex = i;
+    }
+}
+
+console.table(kat);
+document.writeln(`<br>4. Feladat: A legtöbb eladott jegy: ${maxindex+1} kategória`);
+
+// 5. feladat: van-e olyan sor, ahol egyetlen szabad hely sincs?
+
+let van = false;
+
+for (i = 1; i <= 15; i++) {
+    if (teleSor(i) == true) {
+        van = true;
+        console.log('A tele sor száma: ', i);
+        break;
+    }
+}
+
+document.writeln(`<br>5. Feladat: ${ van ? 'Van': 'Nincs' } olyan sor, ahol minden jegy elkelt.`);
+
+function teleSor(x) {
+    let tele = true;
+    for (j = 1; j <= 24; j++) {
+        if (hely[x][j] == 0) {
+            tele = false;
+            break;
+        }
+    }
+    return tele;
+}
