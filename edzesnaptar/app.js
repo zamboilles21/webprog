@@ -37,14 +37,28 @@ for (i = 0; i < 30; i++) {
 
 function naptarhoz_ad(aktho,nap)
 {
-    document.createElement('tr');
+    let tr=document.createElement('tr');
     table.appendChild(tr);
     let td1=document.createElement('td');
     td1.classList.add('cella');
     td1.innerHTML=kiir(aktho+1)+'.'+kiir(nap);
     let td2=document.createElement('td');
     td2.classList.add('cella');
-    td2.innerHTML=edzesek;
+    td2.innerHTML=edzes;
+
+    let aktnap=new Date(aktev+"-"+(aktho+1)+"-"+napszam);
+    let napszam=aktnap.getUTCDay();
+    console.log(napszam)
+
+    if (napszam==6) {
+        td1.classList.add('szombat');
+        td2.classList.add('szombat');
+
+    }
+    if (napszam==0) {
+        td1.classList.add('vasarnap');
+        td2.classList.add('vasarnap');
+    }
     tr.appendChild(td1);
     tr.appendChild(td2);
 
