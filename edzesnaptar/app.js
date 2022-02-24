@@ -67,4 +67,3 @@ function szokoev(ev) {
 }
 
 
-document.getElementById("datum").innerHTML = d;
