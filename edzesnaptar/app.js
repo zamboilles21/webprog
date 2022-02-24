@@ -15,8 +15,15 @@ console.log(aktev)
 
 let k=aktnap;
 for (i = 0; i < 30; i++) {
-    naptarhoz_ad(aktho,k);
+    if (aktedzes%4==0) {
+        naptarhoz_ad(aktho,k,pihenonap);
+    }else{
+        naptarhoz_ad(aktho,k,edzesek[aktedzes]);
+        
+    }
+    aktedzes++;
     k++;
+    
     if (k>napszamok[aktho]) {
         aktho++;
         k=1;
@@ -33,6 +40,7 @@ function naptarhoz_ad(aktho,nap)
     td1.classList('cella');
     td1.innerHTML=kiir(aktho+1)+'.'+kiir(nap);
     let td2=document.createElement('td');
+    td2.innerHTML=edzesek;
     tr.appendChild(td1);
     tr.appendChild(td2);
 
