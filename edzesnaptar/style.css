@@ -2,3 +2,13 @@ table,th,tr,td{
     border: 2px solid black;
     border-collapse: collapse;
 }
+.cella
+{
+    background-color: darkgreen;
+    color: grey;
+    padding: 10px 25px;
+    border-radius: 6px;
+    border-right: 2px solid seagreen;
+    border-bottom: 2px solid slateblue;
+    
+}
