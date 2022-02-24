@@ -10,5 +10,18 @@ table,th,tr,td{
     border-radius: 6px;
     border-right: 2px solid seagreen;
     border-bottom: 2px solid slateblue;
-    
+
+}
+.szombat{
+    background-color: firebrick;
+    color: mediumspringgreen;
+    border-right: 2px solid blueviolet;
+    border-bottom: 2px solid peachpuff;
+
+}
+.vasarnap{
+    background-color:darkslategrey;
+    color: black;
+    border-right: 2px solid blueviolet;
+    border-bottom: 2px solid peachpuff;
 }
