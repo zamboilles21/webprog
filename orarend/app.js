@@ -15,6 +15,7 @@ let osszoraszam=document.querySelector('osszoraszam');
 
 if (orarend != null) {
     orarend.forEach(ora=>{
+        DrawSubject(ora.subjectIDX,ora.dayIdx,ora.hourIdx)
         let cella = document.querySelector('#cell_'+ora.dayIdx+ora.hourIdx);
         cella.innerHTML = tantargyak[ora.subjectIdx].nev 
             + "<span class='room'>" + tantargyak[ora.subjectIdx].terem + "</span>"  
@@ -48,14 +49,8 @@ addBtn.addEventListener('click',function() {
     }else
     {
 
-
-        let cella=document.querySelector('#cell_'+dayIndex+hourIndex);
-        cella.innerHTML = document.querySelector('#cell_'+ora.dayIdx+ora.hourIdx);
-        cella.innerHTML = tantargyak[subjectIndex].nev 
-            + "<span class='room'>" + tantargyak[ora.subjectIdx].terem + "</span>"  
-            + "<span class='teacher'>" + tantargyak[subjectIndex].tanar + "</span>";
-        cella.classList.add(tantargyak[subjectIndex].style);
-
+        DrawSubject(subjectIndex,dayIndex,)
+        
         orarend.push({dayIDX: dayIndex,hourIDX:hourIndex,subjectIDX:subjectIndex});
         osszoraszam.innerHTML=orarend.length;
         localStorage.setItem('timetable',JSON.stringify(orarend));
@@ -107,4 +102,11 @@ hourSelect.addEventListener('change',function(){
 daySelect.addEventListener('change',function(){
     subjectIndex=subjectSelect.value;
 });
+function DrawSubject(subjectIndex,dayIndex,hourIndex) {
+    document.querySelector('#cell_'+ora.dayIdx+ora.hourIdx);
+        cella.innerHTML = tantargyak[index].nev 
+            + "<span class='room'>" + tantargyak[index].terem + "</span>"  
+            + "<span class='teacher'>" + tantargyak[index].tanar + "</span>";
+        cella.classList.add(tantargyak[index].style);
+}
     
