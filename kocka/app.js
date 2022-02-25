@@ -1,15 +1,26 @@
-let A=[];
-let B=[];
-let C=[];
+let A=[20];
+let B=[20];
+let C=[20];
 
-function feltolt()
+let container=document.querySelector('#container');
+
+for (i = 0; i < 20; i++) {
+    kockadobas(i);
+    eredmenykiiras(i);
+    
+}
+function eredmeny(x)
 {
-    for (i = 0; i < 20; i++) 
-    {
-        A.push(Math.floor(Math.random() * 6));
-        B.push(Math.floor(Math.random() * 6));
-        C.push(Math.floor(Math.random() * 6));
-        
-    }
+    let div=document.createElement('div');
+    container.appendChild(div);
+    div.classList.add('dobas');
 
+    let img=document.createElement('img');
+    img.src=`/img/${A[x]}.PNG`
+}
+
+function kockaDobas(x) {
+    A[x]= (Math.round(Math.random()*5)+1);
+    B[x]= (Math.round(Math.random()*5)+1);
+    C[x]= (Math.round(Math.random()*5)+1);
 }
