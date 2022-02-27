@@ -41,7 +41,7 @@ function osszes() {
     for(i = 0; i < A.length; i++){
         osszeg += A[i] + B[i] + C[i];
     }
-    return osszeg / A.length;
+    return osszeg;
     
 }
 document.writeln("Az összeg: "+osszes())
@@ -62,7 +62,7 @@ function max()
 document.writeln("MAX:"+max())
 console.log("MAX: "+max())
 function hatos(){
-    hatso=0;
+    let hatso=0;
     for (let i = 0; i < A.length; i++) {
         if (A[i] == 6 & B[i]==6 & C[i] == 6) {
             hatso++;
@@ -72,4 +72,40 @@ function hatos(){
     return hatso;
 }
 document.writeln("Hatos: "+hatos())
-console.log("Hatos: "+max())
+console.log("Hatos: "+hatos())
+function hatos2(){
+    let hatso2=0;
+    for (let i = 0; i < A.length; i++) {
+        if (A[i] == 6 & B[i]==6 & C[i] == 6) {
+            document.writeln("Volt!")
+        }else{
+            document.writeln("Nem volt!")
+        }
+        
+    }
+    return hatso2;
+}
+function azonos()
+{
+    let azanos1=0;
+    for (let i = 0; i < 21; i++) {
+        if (A[i]==B[i]&&A[i]==C[i]) {
+            azanos1++;
+        }
+        
+    }
+    return azanos1;
+}
+document.writeln("Azonos: "+azonos())
+function nemazonos()
+{
+    let nemazanos1=0;
+    for (let i = 0; i < 21; i++) {
+        if (A[i]!=B[i]&&A[i]!=C[i]) {
+            nemazanos1++;
+        }
+        
+    }
+    return nemazanos1;
+}
+document.writeln("Nem azonos: "+azonos())
