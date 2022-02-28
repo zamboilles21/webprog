@@ -1,0 +1,38 @@
+@font-face{
+    font-family: myDigitFont;
+    src: url('DS-DIGIB.TTF');
+}
+
+body{
+background-color: rosybrown;
+}
+#stopper{
+    width: 450px;
+    height: 250px;
+    background-color: indigo;
+    margin: 100px auto;
+    text-align: center;
+}
+#kijelzo{
+line-height: 200px;
+font-size: 420%;
+background-color: ivory;
+color: sienna;
+font-family: 'myDigitFont';
+}
+#gombok{
+    line-height: 55px;
+}
+button{
+    width: 220px;
+    height: 45px;
+    border: steelblue 1px solid;
+    background-color: darkgreen;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 1 1 2px blue;
+}
+button:hover{
+    background-color: mistyrose;
+    color: yellowgreen;
+}
