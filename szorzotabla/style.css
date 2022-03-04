@@ -28,3 +28,7 @@
 	background-color : #4C4    ;
 	font-weight      : bold    ;
     }
+    #szorzotabla tr>td:hover
+    {
+        background-color: brown;
+    }
