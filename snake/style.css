@@ -1,0 +1,31 @@
+body{
+    background-color: olivedrab;
+    font-family: monospace;
+    color: darkgray;
+    font-size: 35px;
+}
+#gameBackGround{}
+
+#gameArea{}
+
+#result{}
+
+#gameTable{}
+
+#startPanel{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: chocolate;
+            transition: background-color 0.5s;
+}
+
+button{}
+
+ul{}
+
+li{}
+
+#startText{}
