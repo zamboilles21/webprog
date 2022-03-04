@@ -1,6 +1,6 @@
 body {
     font-family: 'Smooch Sans', sans-serif;
-    color: rgb(50, 77, 23);
+    color: greenyellow;
     ;
     font-size: 50px;
 }
@@ -13,12 +13,26 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: honeydew;
+    background-color: aqua;
 }
 
-#gameArea {}
+#gameArea {
+    background-color: coral;
+    box-shadow:1 1 10px crimson;
+    width: 660px;
+    height: 660px;
+    margin: 60px auto;
+    border-radius: 30px;
 
-#results {}
+}
+
+#results { 
+    width: 550px;
+    height: 60px;
+    line-height: 55px;
+    background-color: darksalmon;
+    margin: 30px 50px 0 50px;
+}
 
 #gameTable {}
 
