@@ -32,9 +32,19 @@ body {
     line-height: 55px;
     background-color: darksalmon;
     margin: 30px 50px 0 50px;
+    text-align: center;
+    font-size: 30px;
+    color: magenta;
 }
 
-#gameTable {}
+#gameTable {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 100px 50px 50px 50px;
+    background-image: url('field.png');
+
+}
 
 #startPanel {
     position: absolute;
@@ -69,7 +79,7 @@ button:hover {
 }
 
 #startBtn {
-    margin-top: 20%;
+    margin-top: 220px;
     width: 80px;
     border: none;
     background-color: transparent;
