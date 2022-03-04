@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Snake</title>
 </head>
 <body>
-    <div id="gameBackGround">   
-        <div id="gameArea">   
-            <div id="result"></div>
+    <div id="gameBackGround">
+        <div id="gameArea">
+            <div id="results"></div>
             <div id="gameTable"></div>
         </div>
     </div>
-    <div id="startPanel">   
-        <button id="startBtn">Start</button>
-        <div id="startText">Start</div>
+    <div id="startPanel">
+        <button id="startBtn">
+            <img src="img/play.png" alt="play">
+        </button>
+        <div id="startText">START</div>
         <ul>
-            <li><button id="easy"></button>easy</li>
-            <li>
-                <button id="medium">MEDIUM</button>
-            </li>
-            <li>
-                <button id="hard">HARD</button>
-            </li>
-            <li>
-                <button id="extreme">    
-                        extreme
-                </button>
-            </li>
+            <li><button id="easy">EASY</button></li>
+            <li><button id="medium">MEDIUM</button></li>
+            <li><button id="hard">HARD</button></li>
+            <li><button id="extreme">EXTREME</button></li>
         </ul>
     </div>
     <script src="app.js"></script>
