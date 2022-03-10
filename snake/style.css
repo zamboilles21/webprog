@@ -100,30 +100,47 @@ li {}
 .field{}
 
 .block{
-    background-image: url('block.png');
+    background-image: url('../img/block.png');
     background-repeat: no-repeat;
     background-position: center;
     width: 21px;
     height: 16px;
 } 
-.snakebody{}; 
-.snakehead{}; 
+.snakebody {
+    background-color: green;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 6px;
+    width: 21px;
+    height: 21px;
+}
+
+.snakehead {
+    background-image: url('../img/snakehead.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 6px;
+    width: 21px;
+    height: 21px;
+}
 .apple{
-    background-image: url('apple.png');
+    background-image: url('../img/apple.png');
     background-repeat: no-repeat;
     background-position: center;
     width: 24px;
     height: 24px;
 } 
 .goldenapple{
-    background-image: url('golden_apple.png');
+    background-image: url('../img/golden_apple.png');
     background-repeat: no-repeat;
     background-position: center;
     width: 24px;
     height: 24px;
 } 
 .greenapple{
-    background-image: url('green_apple.png');
+    background-image: url('../img/green_apple.png');
     background-repeat: no-repeat;
     background-position: center;
     width: 24px;
