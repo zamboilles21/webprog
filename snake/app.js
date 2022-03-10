@@ -120,6 +120,8 @@ function movement(){
     }
 }
 function moveSnake() {
+    let last_x=snake[snake.length-1].x;
+    let last_y=snake[snake.length-1].y;
     
 }
 function addSnakeBody() {
