@@ -59,9 +59,10 @@ table = [
     []
 ],
 snake = [],
-
+snakeHead={},
 difficulty = null,
 speed,
+direction,
 obstacle;
 
 startBtn.addEventListener('click', () => {
@@ -79,6 +80,9 @@ if (difficulty != null) {
     switchPanel(1, 2);
     generateTable();
     generateElement(4);
+    generateApple();
+    generateGreenApple();
+    generateGoldenApple();
     drawTable();
 } else {
     window.alert('Válassz egy nehézségi fokozatot!');
@@ -140,6 +144,10 @@ do {
 table[x][y] = element;
 console.log(x, y);
 console.table(table);
+if (element==3) {
+    snakeHead.x=x;
+    snakeHead.y=y;
+}
 }
 function generateObstacle(){
     for (let i = 0; i < obstacle; i++) {
@@ -160,6 +168,40 @@ for (let i = 0; i < 20; i++) {
 str += '</table>';
 gameTable.innerHTML = str;
 }
+function generatesnake()
+{
+    generateElement(3)
+    snake.push({'x':snakeHead.x,'y':snakeHead.y});
+    direction=Math.round(Math.random()*4);
+    switch (direction) {
+        case 0:{
+            if (table[snakeHead.x+1][snakeHead.y]==0) {
+                generateElement(2);
+                snake.push({'x':snakeHead.x-1,'y':snakeHead.y});
+            }
+        }
+        case 1:{
+            if (table[snakeHead.x][snakeHead.y+1]==0) {
+                generateElement(2);
+                snake.push({'x':snakeHead.x,'y':snakeHead.y});
+            }
+        }
+        case 2:{if (table[snakeHead.x+1][snakeHead.y]==0) {
+            generateElement(2);
+            snake.push({'x':snakeHead.x-1,'y':snakeHead.y});
+        }}
+        case 3:{if (table[snakeHead.x][snakeHead.y-1]==0) {
+            table[]
+            snake.push({'x':snakeHead.x,'y':snakeHead.y-1});
+            direction=1;
+        }
+    break;
+    }
+
+            
+           
+    }
+};
 
 function generateApple() {
 generateElement(4);

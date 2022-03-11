@@ -40,8 +40,8 @@ body {
 #gameTable {
     position: absolute;
     width: 500px;
-    height: 400px;
-    margin: 120px 40px 40px 50px;
+    height: 440px;
+    margin: 100px 40px 40px 50px;
     background-image: url('field.png');
     background-size: contain;
 
@@ -104,10 +104,19 @@ li {}
     background-repeat: no-repeat;
     background-position: center;
     width: 21px;
-    height: 16px;
+    height: 18px;
 } 
-.snakebody{}; 
-.snakehead{}; 
+.snakebody{background-image: url('snakehead.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px}; 
+.snakehead{background-image: url('snakehead.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    width: 24px;
+    height: 24px}; 
 .apple{
     background-image: url('apple.png');
     background-repeat: no-repeat;
