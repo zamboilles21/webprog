@@ -1,0 +1,28 @@
+body{
+    background-color: bisque;
+}
+.FcipoMeret{
+    background-color: blue;
+    color: brown;
+    border: 2px dashed lawngreen;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+}
+.NcipoMeret{
+    background-color:maroon;
+    color:gold;
+    border: 2px dashed saddlebrown;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+}
+.cipoadat {
+    color: blue;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
