@@ -17,3 +17,6 @@ let  = email = document.querySelector('#email'),
             }
         })
     });
+    if (is_empty) {
+        alert('Nem adtál meg minden kötelező adatot!');
+    };
