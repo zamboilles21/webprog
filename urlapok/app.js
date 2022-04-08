@@ -69,7 +69,14 @@ regBtn.addEventListener('click', () => {
                 }
             }
                 users.push(user);
-                localStorage.setItem('users',JSON.stringify(users))
+                localStorage.setItem('users',JSON.stringify(users));
+                username.value='';
+                address.value='';
+                email.value='';
+                phone.value='';
+                pass1.value='';
+                pass2.value='';
+
             }
         }
     }
