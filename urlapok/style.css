@@ -24,3 +24,12 @@ footer{
     letter-spacing: 5px;
     font-size: 80%;
 }
+em {
+    color: red;
+    font-weight: bold;
+}
+
+.missing {
+    background-color: rgb(246, 214, 214) !important;
+    border-color: rgb(169, 68, 68);
+}
