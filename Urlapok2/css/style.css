@@ -1,0 +1,35 @@
+body{
+    background-color: aqua;
+}
+.container{
+        background-color: blanchedalmond;
+        box-shadow: 0 0 15px gray;
+
+}
+header{
+    background-color: green;
+    padding: 50px;
+    color: indianred;
+    text-shadow: 0 0 5px blue;
+}
+
+main{
+    padding: 20px;
+}
+footer{
+    background-color: brown;
+    color: whitesmoke;
+    padding: 15px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 80%;
+}
+em {
+    color: red;
+    font-weight: bold;
+}
+
+.missing {
+    background-color: rgb(246, 214, 214) !important;
+    border-color: rgb(169, 68, 68);
+}

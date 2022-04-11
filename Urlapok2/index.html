@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Űrlapok2</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Űrlapok2</h1>
+        </header>
+        <main>
+            <!--
+                kategoria
+                gyártó
+                típus
+                évjárat
+                szín
+                üzemanyag
+                állapot
+                leiras
+                extrák
+                ár
+                kép
+            -->
+            <h3>Új gépjarmű felvétele</h3>
+            <hr>
+            <form action="#" method="POST" >
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option value=""></option>
+                      <option value="személyautó">személyautó</option>
+                      <option value="Kishaszonjármű">Kishaszonjármű</option>
+                      <option value="Autóbusz">Autóbusz</option>
+                      <option value="Lakóautó">Lakóautó</option>
+                      <option value="Munkagép">Munkagép</option>
+                      <option value="Pótkocsi/ Utánfutó">Pótkocsi/ Utánfutó</option>
+                      <option value="Motorkerékpár">Motorkerékpár</option>
+                      <option value="Egyéb">Egyéb</option>
+                    </select>
+                    <label for="kategoria">Kategória...</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option value=""></option>
+                      <option value="Audi">Audi</option>
+                      <option value="Alfa Romeo">Alfa Romeo</option>
+                      <option value="BMW">BMW</option>
+                      <option value="ercedes-benz">Mercedes-benz</option>
+                      <option value="Fiat">Fiat</option>
+                      <option value="Ford">Ford</option>
+                      <option value="Yugo">Yugo</option>
+                      <option value="Hyundai">Hyundai</option>
+                      <option value="Mazda">Mazda</option>
+                      <option value="Lada">Lada</option>
+                      <option value="Nissan">Nissan</option>
+                      <option value="Toyota">Toyota</option>
+                      <option value="Koenigsegg">Koenigsegg</option>
+                      <option value="Tesla">Tesla</option>
+                      <option value="RAM">RAM</option>
+                      <option value="Subaru">Subaru</option>
+                      <option value="Volvo">Volvo</option>
+                      <option value="Suzuki">Suzuki</option>
+                      <option value="Porsche">Porsche</option>
+                    </select>
+                    <label for="kategoria">Gyártó...</label>
+                  </div>
+                <div class="form-floating mb-3">
+                    <input type="text" id="tipus" class="form-control" placeholder="Típus...">
+                    <label for="tipus">Típus...<em>*</em></label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="number" id="evjarat" class="form-control" placeholder="évjárat..." min="0" value="0">
+                    <label for="evjarat">évjárat<em>*</em></label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" id="szín" class="form-control" placeholder="Típus...">
+                    <label for="tipus">Szín...<em>*</em></label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <option value=""></option>
+                      <option value="benzin">Benzin</option>
+                      <option value="diezel">Diezel</option>
+                      <option value="elektromos">Elektromos</option>
+                      <option value="hibrid">Hibrid</option>
+                      <option value="Egyéb">Egyéb</option>
+                    </select>
+                    <label for="uzemanyag">Üzemanyag...</label>
+                  </div>
+                  <label class="form-check-label mb-3" for="flexCheckDefault">Állapot:</label>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="allapot" value="normál" id="allapot" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Normál
+                    </label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" value="Sérült" id="allapot" name="allapot" >
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Sérült
+                    </label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" value="Hiányos" id="allapot" name="allapot">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Hiányos
+                    </label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" value="Fődarab hibás" id="allapot" name="allapot">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Fődarab hibás
+                    </label>
+                    
+                  </div>
+                  <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="Leírás" id="floatingTextarea" style="min-height: 200px;"></textarea>
+                    <label for="floatingTextarea">Leírás</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="klima">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Klíma</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="Tempomat">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Tempomat</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="Vonohorog">
+                    <label class="form-check-label" for="flexSwitchCheckDisabled">Vonóhorog</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="elektromosbalak">
+                    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Elektromos ablak</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="Alufelni">
+                    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Alufelni</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="automata">
+                    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Automata váltó</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="GPS">
+                    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">GPS</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="number" id="ar" class="form-control" placeholder="Ár...">
+                    <label for="ar">Ár (ft)<em>*</em></label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="file" id="kep" class="form-control" placeholder="Fénykép">
+                    <label for="kep">Fénykép<em>*</em></label>
+                </div>
+
+                <button class="btn btn-primary" id="felveszBtn">Felvesz</button>
+            </form>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
