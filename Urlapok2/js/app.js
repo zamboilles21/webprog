@@ -16,7 +16,9 @@ let felveszBtn=document.querySelector('#felveszBtn'),
         {'extra':'Alufelni','ertek':form.Alufelni.value},
         {'extra':'automata','ertek':form.automata.value},
         {'extra':'GPS','ertek':form.GPS.value},
-]
+],
+ar=form.ar,
+kep=form.kep;
 
 
 
