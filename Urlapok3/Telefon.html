@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Telefon felvétel</title>
+</head>
+<body>
+    <div id="Container">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Telefon adatainak felvétele!
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <form >
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                              <option value="" selected></option>
+                              <option value="Samsung">Samsung</option>
+                              <option value="Apple">Apple</option>
+                              <option value="Nokia">Nokia</option>
+                              <option value="Xiaomi">Xiaomi</option>
+                              <option value="Huawei">Huawei</option>
+                              <option value="Egyéb">Egyéb</option>
+                            </select>
+                            <label for="Gyarto">Gyártó<em>*</em></label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="text" id="tipus" class="form-control" placeholder="Model...">
+                            <label for="Model">Model...<em>*</em></label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                              <option value="" selected></option>
+                              <option value="1GB">1GB</option>
+                              <option value="2GB">2GB</option>
+                              <option value="4GB">4GB</option>
+                              <option value="8GB">8GB</option>
+                              <option value="10GB">10GB</option>
+                              <option value="12GB">12GB</option>
+                              <option value="Egyéb">Egyéb</option>
+                            </select>
+                            <label for="Memoria">Memória<em>*</em></label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" id="tipus" class="form-control" placeholder="Kamera(MP)...">
+                            <label for="Kamera">Kamera(MP)...<em>*</em></label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Leírás" id="floatingTextarea" style="min-height: 200px;"></textarea>
+                            <label for="leiras">Leírás</label>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="IOS">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">IOS</label>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="Android">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Android</label>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="Egyéb">
+                            <label class="form-check-label" for="flexSwitchCheckDisabled">Egyéb...</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                              <option value="" selected></option>
+                              <option value="Yettel">Yettel</option>
+                              <option value="Telekom">Telekom</option>
+                              <option value="Vodafon">Vodafon</option>
+                              <option value="Fuggetlen">Független</option>
+                        
+                            </select>
+                            <label for="Szolgáltató">Szolgáltató<em>*</em></label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="number" id="ar" class="form-control" placeholder="Ár...">
+                            <label for="ar">Ár (ft)<em>*</em></label>
+                        </div>
+                        
+                    </form>
+                </div>
+              </div>
+              
+            </div>
+            <button class="btn btn-primary" id="felveszBtn">Felvesz</button>
+            <a href="index.html" class="btn btn-primary">vissza</a>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
