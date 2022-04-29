@@ -7,3 +7,9 @@ let felveszBtn = document.querySelector('#felveszBtn'),
     Kamera = form.Kamera,
     leiras = form.leiras,
     leiras = form.leiras,
+    OP = [
+        { 'extra': 'IOS', 'ertek': form.IOS.checked },
+        { 'extra': 'Android', 'ertek': form.Android.checked },
+        { 'extra': 'Egyeb', 'ertek': form.Egyeb.checked },
+        
+    ],
