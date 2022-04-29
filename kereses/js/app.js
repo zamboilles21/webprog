@@ -999,12 +999,31 @@ let adatok=[{"id":1,"first_name":"Orin","last_name":"Pellew","email":"opellew0@h
 {"id":999,"first_name":"Beckie","last_name":"Dufore","email":"bduforerq@utexas.edu","gender":"Female","price":"$918.80","address":"3 Sherman Parkway"},
 {"id":1000,"first_name":"Elmira","last_name":"Janway","email":"ejanwayrr@noaa.gov","gender":"Female","price":"$1977.02","address":"306 Iowa Trail"}];
 
-loadData();
+loadData('');
 
-function loadData(){
+let searchField=document.querySelector('#floatingInput');
+
+searchfield.addEventListener('keydown', (event)=>{
+
+if (event.keyCode==13) {
+    loadData(searchField.value);
+}
+});
+
+
+function loadData(condition){
 let tableBody=document.querySelector('tbody');
 tableBody.innerHTML='';
+let i=0;
 adatok.forEach(item=>{
+    condition=condition.toLowerCase();
+    if (item.first_name.toLowerCase().includes(condition) 
+    || item.last_name.toLowerCase().includes(condition) 
+    || item.gender.toLowerCase().includes(condition) 
+    || item.address.toLowerCase().includes(condition) 
+    || item.price.toLowerCase().includes(condition) ) {
+        
+    
 let tr=document.createElement('tr');
 let td1=document.createElement('td');
 let td2=document.createElement('td');
@@ -1033,6 +1052,8 @@ tr.appendChild(td6);
 tr.appendChild(td7);
 
 tableBody.appendChild(tr);
+    }
+    document.querySelector('span').innerHTML=i+'/'+adatok.length;
 });
 
 }
