@@ -2,15 +2,15 @@ body{
     background-color: aqua;
 }
 .container{
-        background-color: blanchedalmond;
-        box-shadow: 0 0 15px gray;
+        background-color: rebeccapurple;
+        box-shadow: 0 0 15px tomato;
 
 }
 header{
-    background-color: green;
+    background-color: navajowhite;
     padding: 50px;
-    color: indianred;
-    text-shadow: 0 0 5px blue;
+    color: indigo;
+    text-shadow: 0 0 5px coral;
 }
 
 main{
