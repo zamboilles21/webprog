@@ -1000,60 +1000,66 @@ let adatok=[{"id":1,"first_name":"Orin","last_name":"Pellew","email":"opellew0@h
 {"id":1000,"first_name":"Elmira","last_name":"Janway","email":"ejanwayrr@noaa.gov","gender":"Female","price":"$1977.02","address":"306 Iowa Trail"}];
 
 loadData('');
-
 let searchField=document.querySelector('#floatingInput');
-
-searchfield.addEventListener('keydown', (event)=>{
-
-if (event.keyCode==13) {
-    loadData(searchField.value);
-}
-});
+searchField.addEventListener('keydown',(event)=>{
+    //if(event.keyCode==13)
+    {
+        loadData(searchField.value)
+    }
+})
 
 
 function loadData(condition){
-let tableBody=document.querySelector('tbody');
-tableBody.innerHTML='';
-let i=0;
-adatok.forEach(item=>{
-    condition=condition.toLowerCase();
-    if (item.first_name.toLowerCase().includes(condition) 
-    || item.last_name.toLowerCase().includes(condition) 
-    || item.gender.toLowerCase().includes(condition) 
-    || item.address.toLowerCase().includes(condition) 
-    || item.price.toLowerCase().includes(condition) ) {
+    let tableBody=document.querySelector('tbody');
+    let caseSensitive=document.querySelector('#caseSensitive');
+    tableBody.innerHTML='';
+    let i=0;
+
+    adatok.forEach(item =>{
+        if(!caseSensitive){
+            condition=condition.toLowerCase();
+        }
         
-    
-let tr=document.createElement('tr');
-let td1=document.createElement('td');
-let td2=document.createElement('td');
-let td3=document.createElement('td');
-let td4=document.createElement('td');
-let td5=document.createElement('td');
-let td6=document.createElement('td');
-let td7=document.createElement('td');
+        
+        if(item.first_name.toLowerCase().includes(condition) 
+        || item.last_name.toLowerCase().includes(condition) 
+        || item.gender.toLowerCase().includes(condition)
+        || item.address.toLowerCase().includes(condition)
+        || item.email.toLowerCase().includes(condition)
+        ){
+
+        
 
 
-td1.innerHTML=item.id;
-td2.innerHTML=item.first_name;
-td3.innerHTML=item.last_name;
-td4.innerHTML=item.gender;
-td5.innerHTML=item.address;
-td6.innerHTML=item.email;
-td7.innerHTML=item.price;
-td7.classList.add('text-end');
+            i++;
+            let tr=document.createElement('tr');
+            let td1=document.createElement('td');
+            td1.innerHTML=item.id;
+            let td2=document.createElement('td');
+            td2.innerHTML=item.first_name;
+            let td3=document.createElement('td');
+            td3.innerHTML=item.last_name;
+            let td4=document.createElement('td');
+            td4.innerHTML=item.gender;
+            let td5=document.createElement('td');
+            td5.innerHTML=item.address;
+            let td6=document.createElement('td');
+            td6.innerHTML=item.email;
+            let td7=document.createElement('td');
+            td7.innerHTML=item.price;
+            td7.classList.add('text-end')
 
-tr.appendChild(td1);
-tr.appendChild(td2);
-tr.appendChild(td3);
-tr.appendChild(td4);
-tr.appendChild(td5);
-tr.appendChild(td6);
-tr.appendChild(td7);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            tr.appendChild(td5);
+            tr.appendChild(td6);
+            tr.appendChild(td7);
 
-tableBody.appendChild(tr);
-    }
-    document.querySelector('span').innerHTML=i+'/'+adatok.length;
-});
+            tableBody.appendChild(tr);
+        }
+        document.querySelector('span').innerHTML=i+'/'+adatok.length
+    })
 
 }

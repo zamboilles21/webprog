@@ -1,4 +1,4 @@
-<script>
+
 if (!sessionStorage.getItem('access')) {
     document.location.href='login.html'
 }else{
@@ -6,4 +6,3 @@ if (!sessionStorage.getItem('access')) {
     document.getElementById('name').value=loggeduser.loggedUser;
     document.getElementById('email').value=loggeduser.loggeduserMail;
 }
-</script>
