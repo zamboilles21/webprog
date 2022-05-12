@@ -1,0 +1,23 @@
+body{
+    background-color: brown;
+}
+.container{
+    background-color: navajowhite;
+}
+header{
+    background-color: coral;
+    padding: 50px;
+    text-align: center;
+    color: darkred;
+    text-shadow:gold 1px 1px 5px;
+}
+footer{
+    background-color: rebeccapurple;
+    text-align: center;
+    color: whitesmoke;
+    letter-spacing: 4px;
+
+}
+main{
+    padding: 15px;
+}

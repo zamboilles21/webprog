@@ -1000,7 +1000,7 @@ let adatok=[{"id":1,"first_name":"Orin","last_name":"Pellew","email":"opellew0@h
 {"id":1000,"first_name":"Elmira","last_name":"Janway","email":"ejanwayrr@noaa.gov","gender":"Female","price":"$1977.02","address":"306 Iowa Trail"}];
 
 loadData('');
-let searchField=document.querySelector('#floatingInput');
+let searchField=document.querySelector('#floatingInputValue');
 searchField.addEventListener('keydown',(event)=>{
     //if(event.keyCode==13)
     {
