@@ -6,15 +6,6 @@ let felveszBtn = document.querySelector('#felveszBtn'),
     Memoria = form.Memoria,
     Kamera = form.Kamera,
     leiras = form.leiras,
-<<<<<<< HEAD
-    leiras = form.leiras,
-    OP = [
-        { 'extra': 'IOS', 'ertek': form.IOS.checked },
-        { 'extra': 'Android', 'ertek': form.Android.checked },
-        { 'extra': 'Egyeb', 'ertek': form.Egyeb.checked },
-        
-    ],
-=======
     OP= [
         { 'OP': 'IOS', 'ertek': form.IOS.checked },
         { 'OP': 'Android', 'ertek': form.Android.checked },
@@ -136,4 +127,3 @@ let felveszBtn = document.querySelector('#felveszBtn'),
             i++;
         });
     }
->>>>>>> 7cd327a996abe4e8d7650dd93e59f427b9dc681c

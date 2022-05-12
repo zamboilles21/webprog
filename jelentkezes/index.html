@@ -9,12 +9,66 @@
     <title>jelentkezes</title>
 </head>
 <body>
+        <div class="container">
+            <header>
+                <h1>Javascript - Viszgára jelentkezés</h1>
+            </header>
+            <main>
+                <h3>Viszgára jelentkezés</h3>
+                <hr>
+                <form action="#" method="POST">
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                          <option value="2022-05-22" selected>2022-05-22</option>
+                          <option value="2022-05-27">2022-05-27</option>
+                          <option value="2022-06-15">2022-06-15</option>
+                          <option value="2022-06-20">2022-06-20</option>
+                          
 
+                        </select>
+                        <label for="idopont">ídőpont<em>*</em></label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                          <option value="Adatbazis" selected>Adatbázis</option>
+                          <option value="Frontend-backend">Frontend-backend</option>
+                          <option value="Asztali alk">Asztali</option>
+                          <option value="Webprog">Webprogramozás</option>
+                          <option value="Szoftverteszteles">Szoftvertesztelés</option>
+                          <option value="Mobilalkalmazas">Mobilalkalmazás</option>
 
+                        </select>
+                        <label for="Vizsga">Vizsga<em>*</em></label>
+                    </div>
 
-
-
+                    <div class="form-floating mb-3">
+                        <input type="text" id="name" class="form-control" placeholder="Név...">
+                        <label for="name">Név: <em>*</em></label>
+                    </div>
     
+                    
+    
+                    <div class="form-floating mb-3">
+                        <input type="email" id="email" class="form-control" placeholder="E-mail cím...">
+                        <label for="email">E-mail cím: <em>*</em></label>
+                    </div>
+    
+                    <div class="form-floating mb-3">
+                        <input type="text" id="phone" class="form-control" placeholder="Telefonszám...">
+                        <label for="phone">Telefonszám:</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="elfog">
+                        <label class="form-check-label" for="Elfog">Elfogadom</label>
+                      </div>
+                    <button class="btn btn-primary" id="jelentBtn">jelentkezés</button>
+    
+        </div>
+
+
+
+
+
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
 </body>
