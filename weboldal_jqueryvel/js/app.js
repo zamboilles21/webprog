@@ -1,6 +1,6 @@
 function contentLoad(page){
     $('#content').load(page+'.html');
-    $('#'+page).html(getAnimals(page));
+    $('#cats').html(getAnimals(page));
 }
 
 let animals = [
@@ -33,13 +33,23 @@ let animals = [
         "descripttion": "dfsdjfshd fjadsh fjkasdhfjkla hsdjfkhasdjklfh aluksdjfh alkjsdfa",
         "phone": "06203334455",
         "price": 8000
-    }
+    },
     {
         "categories": "dogs",
         "name": "Luca",
         "age": 4,
         "gender": "nőstény",
         "picture": "dormi.jpg",
+        "descripttion": "dfsdjfshd fjadsh fjkasdhfjkla hsdjfkhasdjklfh aluksdjfh alkjsdfa",
+        "phone": "06203334455",
+        "price": 80000000
+    },
+    {
+        "categories": "dogs",
+        "name": "Luca",
+        "age": 4,
+        "gender": "nőstény",
+        "picture": "img/Luca.png",
         "descripttion": "dfsdjfshd fjadsh fjkasdhfjkla hsdjfkhasdjklfh aluksdjfh alkjsdfa",
         "phone": "06203334455",
         "price": 80000000
