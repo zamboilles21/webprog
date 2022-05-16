@@ -1,3 +1,12 @@
+$('document').ready(function(){
+    contentLoad('home');
+    $('#info').html(infos.address);
+    $('#info2').html(infos.email);
+    $('#info3').html(infos.phone);
+    $('#hirdetesszama').html(animals.length+' db');
+})
+
+
 function contentLoad(page){
     $('#content').load(page+'.html')
     
@@ -6,7 +15,11 @@ function contentLoad(page){
     }, 500);
     
 }
-
+let infos={
+    "address":"6500 Baja, Bácska tér 1.",
+    "email":"valami@valami.hu",
+    "phone":"06203339988"
+}
 let animals = [
     {
         "categories": "cats",
