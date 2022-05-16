@@ -1,6 +1,10 @@
 function contentLoad(page){
-    $('#content').load(page+'.html');
-    $('#cats').html(getAnimals(page));
+    $('#content').load(page+'.html')
+    
+    setTimeout(() => {
+        $('#'+page).html(getAnimals(page));
+    }, 500);
+    
 }
 
 let animals = [
@@ -46,13 +50,13 @@ let animals = [
     },
     {
         "categories": "dogs",
-        "name": "Luca",
-        "age": 4,
-        "gender": "nőstény",
-        "picture": "img/Luca.png",
+        "name": "Sanyi",
+        "age": 6,
+        "gender": "Kan",
+        "picture": "sanyi.jpg",
         "descripttion": "dfsdjfshd fjadsh fjkasdhfjkla hsdjfkhasdjklfh aluksdjfh alkjsdfa",
         "phone": "06203334455",
-        "price": 80000000
+        "price": 800
     }
 ];
 
