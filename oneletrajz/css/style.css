@@ -1,15 +1,23 @@
-.carousel-caption{
-    color: white;
-    text-shadow: 0 0 2px black;
-    background-color: rgba(125, 125, 125, 0.4);
+body{
+    background-color: brown;
 }
-
-
-footer{
-    background-color: black;
-    color: white;
-    letter-spacing: 3px;
+.container{
+    background-color: navajowhite;
+}
+header{
+    background-color: coral;
+    padding: 50px;
     text-align: center;
-    padding: 20px;
-    font-size: 80%;
+    color: darkred;
+    text-shadow:gold 1px 1px 5px;
+}
+footer{
+    background-color: rebeccapurple;
+    text-align: center;
+    color: whitesmoke;
+    letter-spacing: 4px;
+
+}
+main{
+    padding: 15px;
 }
