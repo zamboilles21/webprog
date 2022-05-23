@@ -12,6 +12,60 @@ function contentLoad(page){
     }, 500);
     
 }
+let regBtn=document.querySelector('#RegBtn'),
+    reserBtn=document.querySelector('#ReserBtn'),
+    form=document.querySelector('form'),
+    name=form.name,
+    address=form.address,
+    phone=form.phone,
+    email=form.email,
+    date=form.date,
+    gender=form.gender,
+    floatingTextarea=form.floatingTextarea,
+    nyelvek=form.nyelvek,
+    szintek=form.szintek;
+
+if (adatok=localStorage.getItem('emberek')) {
+        gepjarmuvek=JSON.parse(adatok);
+    }
+RegBtn.addEventListener('click', ()=>{
+        if (address.value=='' || name.value=='' || phone.value=='' || gender.value==0 || email.value=='' || gyarto.value=='' || date.value=='' || nyelvek.value==''|| szintek.value=='') {
+            alert('Hiányzó adat!')
+        }
+        else
+        {
+            ember={
+                'id':emberek.length+1,
+                'name': name.value,
+                'address':address.value,
+                'phone':phone.value,
+                'email':email.value,
+                'date':date.value,
+                'gender':gender.value,
+                'nyelvek':nyelvek.value,
+                'szintek':szintek.value,
+                
+            }
+            emberek.push(ember);
+    
+            localStorage.setItem('emberek',JSON.stringify(emberek));
+            alert('Felvéve!')
+        }
+        
+    
+    });
+    ReserBtn.addEventListener('click', ()=>{
+        name.value='';
+        address.value='';
+        gender.value='';
+        phone.value='';
+        email.value='';
+        date.value='';
+        nyelvek.value='';
+        szintek.value='';
+        
+
+    });
 let infos={
     "address":"6500 Baja, Bácska tér 1.",
     "email":"valami@valami.hu",
