@@ -1,0 +1,33 @@
+body{
+    background-color:gray;
+}
+.container{
+    background-color: navajowhite;
+}
+header{
+    background-color: blueviolet;
+    padding: 50px;
+    text-align: center;
+    color:violet;
+    text-shadow:aqua 1px 1px 5px;
+}
+footer{
+    background-color: rebeccapurple;
+    text-align: center;
+    color: whitesmoke;
+    letter-spacing: 4px;
+
+}
+main{
+    padding: 15px;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
