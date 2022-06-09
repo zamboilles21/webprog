@@ -19,8 +19,21 @@ footer{
     letter-spacing: 4px;
 
 }
+#gomb{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100px;
+    height: max-content;
+
+}
 main{
     padding: 15px;
+}
+img{
+    width: 500px;
+    height: fit-content;
 }
 .parent {
     display: grid;
@@ -28,6 +41,9 @@ main{
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    border: 5px black solid;
+    margin: auto;
+    padding: auto;
     }
     
     .div1 { grid-area: 1 / 1 / 2 / 2; }
